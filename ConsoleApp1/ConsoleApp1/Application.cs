@@ -54,8 +54,8 @@ public class Application
     
     public void LoadingContainerOntoShip(Ship ship, Container container)
     {
-        if (ship.MaxNumberOfShip < ship.List.Count &&
-            ship.MaxWeightOfLoad <= ship.CalculateTotalWeight() + container.Mass)
+        if (ship.MaxNumberOfShip > ship.List.Count+1 &&
+            ship.MaxWeightOfLoad >= ship.CalculateTotalWeight() + container.Mass)
         {
             ship.List.Add(container);
         }

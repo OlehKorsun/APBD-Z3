@@ -1,32 +1,26 @@
-﻿using System.Collections;
+﻿namespace ConsoleApp1;
 
-namespace ConsoleApp1;
-
-public class Ship(double maxVelocity, int maxNumberOfShip, double maxWeightOfLoad, List<Container> List)
+public class Ship
 {
-    public List<Container> List
+
+    public Ship(double maxVelocity, int maxNumberOfShip, double maxWeightOfLoad, List<Container> list)
     {
-        get => List;
-        set => List = value;
+        this.MaxVelocity = maxVelocity;
+        this.MaxNumberOfShip = maxNumberOfShip;
+        this.MaxWeightOfLoad = maxWeightOfLoad;
+        this.List = list;
     }
+    
+    public List<Container> List { get; set; }
 
     public double MaxVelocity
-    {
-        get => maxVelocity;
-        set => maxVelocity = value;
-    }
+    { get; set; }
 
     public int MaxNumberOfShip
-    {
-        get => maxNumberOfShip;
-        set => maxNumberOfShip = value;
-    }
+    { get; set; }
 
     public double MaxWeightOfLoad
-    {
-        get => maxWeightOfLoad;
-        set => maxWeightOfLoad = value;
-    }
+    { get; set; }
 
     public double CalculateTotalWeight()
     {

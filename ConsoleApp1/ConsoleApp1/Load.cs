@@ -1,22 +1,19 @@
 ﻿namespace ConsoleApp1;
 
-public class Load(bool isDangerous, double? temperature, string type)
+public class Load
 {
-    public bool isDangerous1
+    public Load(bool isDangerous, double? temperature, string type)
     {
-        get => isDangerous;
-        set => isDangerous = value;
+        this.temperature = temperature;
+        this.type = type;
+        this.isDangerous = isDangerous;
     }
+    public bool isDangerous
+    { get; set; }
 
     public double? temperature
-    {
-        get => temperature;
-        set => temperature = value;
-    }
+    { get; set; }
 
     public string type
-    {
-        get => type;
-        set => type = value;
-    }
+    { get; set; }
 }

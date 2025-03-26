@@ -24,7 +24,7 @@ public class main
         Console.WriteLine(application.PrintContainerInformation(liquidContainer));
         
         
-        application.LoadingLoadIntoContainer(refrigeratedContainer, new Load(false, 18, "Milk"), 80);
+        application.LoadingLoadIntoContainer(refrigeratedContainer, new Load(false, 11, "Milk"), 80);
         Console.WriteLine(application.PrintContainerInformation(refrigeratedContainer));
 
         
@@ -34,10 +34,10 @@ public class main
         List<Container> list = new List<Container>();
         
         Ship ship = new Ship(10, 50, 1000, list);
-        application.PrintShipInformation(ship);
+        Console.WriteLine(application.PrintShipInformation(ship));
         
         application.LoadingContainerOntoShip(ship, liquidContainer);
-        application.PrintShipInformation(ship);
+        Console.WriteLine(application.PrintShipInformation(ship));
         
         
 

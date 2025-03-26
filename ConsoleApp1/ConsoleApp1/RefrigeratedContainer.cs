@@ -4,9 +4,10 @@ public class RefrigeratedContainer : Container
 {
     public RefrigeratedContainer(double mass, double height, double depth, double maxLoadCapacity, Load load) : base(mass, height, mass, depth, maxLoadCapacity)
     {
-        base.letter = 'C';
-        base.uniqueNumber = Container.staticNumber;
-        Container.staticNumber++;
+        letter = 'C';
+        uniqueNumber = staticNumber;
+        staticNumber++;
+        Load = load;
     }
 
     public Load Load { get; set; }

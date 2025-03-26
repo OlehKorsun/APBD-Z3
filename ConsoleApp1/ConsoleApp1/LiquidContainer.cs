@@ -13,11 +13,11 @@ public class LiquidContainer : Container, IHazardNotifier
 
     public override void Loading(double mass, Load load)
     {
-        if (load.isDangerous1 && this.Mass + mass > this.MaxLoadCapacity / 2)
+        if (load.isDangerous && Mass + mass > MaxLoadCapacity / 2)
         {
             Console.WriteLine(Notify("It is not possible to load more than 50% of the dangerous substance", serialNumber));
             return;
-        } else if (!load.isDangerous1 && this.Mass + mass > this.MaxLoadCapacity * 0.9)
+        } else if (!load.isDangerous && Mass + mass > MaxLoadCapacity * 0.9)
         {
             Console.WriteLine(Notify("You can't load more than 90% of the substance", serialNumber));
             return;

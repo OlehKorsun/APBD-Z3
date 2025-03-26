@@ -7,13 +7,12 @@ public class GasContainer : Container, IHazardNotifier
         base.letter = 'G';
         base.uniqueNumber = Container.staticNumber;
         Container.staticNumber++;
+        this.Pressure = pressure;
+        
     }
 
     public double Pressure
-    {
-        get => Pressure;
-        set => Pressure = value;
-    }
+    { get; set; }
 
 
     public override void Emptying()
